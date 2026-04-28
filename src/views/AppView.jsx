@@ -4,9 +4,18 @@ import CardChildren from '../components/CardChildren';
 import PropsComponent from '../components/PropsComponent';
 import ChildrenComponent from '../components/ChildrenComponent';
 import UsuarioComponent from '../components/UsuarioComponent';
+import ButtonActionComponent from '../components/ButtonActionComponent'
+import ListaComponent from '../components/ListaComponent';
 
 const parametro = Math.floor(Math.random() * 10);
 
+const handleOnClick = () => {
+    console.log('Me has presionado');
+}
+
+const handleSelection = (elemento) => {
+    console.log(elemento)
+}
 
 export default function AppView() {
 
@@ -40,6 +49,13 @@ export default function AppView() {
                 {/* Recorrer todo el objeto de user y mandar los atributos, ojo que tiene que nombrarse igual.*/}
                 <UsuarioComponent {...user}/>
               </div>
+                <div>
+                    {/* Se puede mandar la funcion asi: onClick={handleOnClick()}, esto hace que se ejecuta automaticamente pero no se ejecute otra vez cuando se le pida. */}
+                    <ButtonActionComponent onClick={handleOnClick}/>
+                </div>
+                <div>
+                    <ListaComponent onSeleccionar={handleSelection}/>
+                </div>
           </div>
           <div> 
                 <Link to={`/parametro/${parametro}`} className=''>
