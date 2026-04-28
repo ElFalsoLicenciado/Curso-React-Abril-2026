@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+/* Uso de clases con Tailwind */
+@layer components {
+    .h1 {
+        @apply font-bold text-2xl
+    }
+
+    .button-simple {
+        @apply px-4 py-2 bg-blue-500 text-white rounded;
+    }
+
+    .pr2 {
+        @apply px-2.5 py-2 border-20 border-transparent
+    }
+
+    .pr2-div {
+        @apply border-2 border-gray-400 border-dotted
+    }
+}
