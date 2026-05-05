@@ -1,7 +1,7 @@
 export default function ListaComponent({onSeleccionar}) {
   return (
     <div>
-        <ul className='flex flex-col justify-self-center h-20'>
+        <ul className='flex flex-col justify-self-center h-20 gap-y-1.5'>
             <li>
                 <button className='button-simple' onClick={() => onSeleccionar('Elemento 1 seleccionado')}>Selecciona elemento 1</button>
             </li>

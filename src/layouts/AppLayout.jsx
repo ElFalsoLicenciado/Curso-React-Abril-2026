@@ -3,14 +3,14 @@ import { Link, Outlet } from 'react-router-dom'
 
 export default function AppLayout() {
   return (
-    <div className='justify-center content-center align-middle'>  
+    <div className='justify-center content-center align-middle w-full'>  
         {/* Grid: Agrupar en cajas.  grid-cols: Numero de columnas*/}
         {/* Flex: Indica la capacidad de un elemento para alterar sus dimensiones y llenar el espacio disponible. Distribuciones: flex-row: Horizontal. flex-col: Vertical*/}
         <div className='bg-gray-200 flex flex-col h-dvh bottom-0 top-0'> {/*h-dvh: Ocupar toda la altura. w-dvh: Ocupar toda la anchura.*/}
             <div className='bg-amber-100 h-20 border-b-2 border-b-black text-center justify-center content-center'> {/*h-N: Cuanta porcentaje la altura tomar. border-b: Referente al borde*/}
                 <h1>MR. SEXO</h1>
             </div>
-            <div className='flex-1 w-[70%] justify-center content-center align-middle'>
+            <div className='flex-1 px-4 justify-center content-center flex flex-col mx-auto w-[90%]'>
                 <Outlet />
             </div>
             {/* ESTE ES UN EJEMPLO DE FOOTER */}

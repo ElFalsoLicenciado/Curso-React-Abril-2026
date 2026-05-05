@@ -1,6 +1,6 @@
 // FUNCIONES
-export default function ButtonActionComponent({onClick}) {
+export default function ButtonActionComponent({onClick, texto}) {
   return (
-    <button onClick={onClick}>Hazme click</button>
+    <button className='button-simple' onClick={onClick}>{texto}</button>
   )
 }
